@@ -4,15 +4,16 @@
 
 You can complete your free registration from the Google website [here](https://cloud.google.com/free?utm_source=google&utm_medium=cpc&utm_campaign=Cloud-SS-DR-GCP-1713658-GCP-DR-NA-US-en-Google-BKWS-EXA-GeneralGCP&utm_content=c-Hybrid+%7C+BKWS+-+EXA+%7C+Txt-Generic+Cloud-Cloud+Generic-Cloud+Generic-6458750523&utm_term=google%20cloud&gclsrc=aw.ds&gad_source=1&gad_campaignid=23752515549&gclid=CjwKCAjwhZDUBhBGEiwAbi5bjkO1ry1Jx-hTk80lTEPQsbhVCPV-QtHbElYYPBFAQtrTU4LRYsKcnRoCopMQAvD_BwE). 
 
-Creating a VM instance on Google cloud is quite straightforward.
-When you create the VM instance, we suggest the following parameters:
+## Step 2: Create a VM instance 
 
-## Step 1: Machine configuration 
-
-2 vCPU and 4GB of memory is more desirable. However, 
-1 vCPU and 2GB is sufficient for most SEED labs. You can
+==Note:== When you create the VM instance, a configuration of 2 vCPU and 4GB of memory is more desirable. However, 
+1 vCPU and 2GB is sufficient for most labs in CSC4222 Secure Software Engineering. You can
 easily change the machine configuration later after the machine
 is created. 
+
+- In the navigation menu, click "Marketplace". In the Marketplace, search for Ubuntu 20.04. 
+
+
 
 ![machine configuration](./Figs/gcp_machine_config.jpg)
 
