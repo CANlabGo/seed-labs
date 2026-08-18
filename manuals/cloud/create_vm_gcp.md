@@ -22,6 +22,9 @@ is created.
   <mark> Note: <mark> Do NOT use any versions newer than Ubuntu 20.04, since some labs may not be compatible. Also, make sure to choose the x86/64bit, amd64 version, rather than the arm64 version. 
 ![Boot Disk](./Figs/GoogleCloudConfiguration2.png)
 
+- Click "Create", then you will see the created VM on the VM instance page.
+  
+
 ## Step 3: Machine Configuration
 
 
