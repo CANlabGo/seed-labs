@@ -6,16 +6,21 @@ You can complete your free registration from the Google website [here](https://c
 
 ## Step 2: Create a VM instance 
 
-==Note:== When you create the VM instance, a configuration of 2 vCPU and 4GB of memory is more desirable. However, 
+<mark>Note:<mark> When you create the VM instance, a configuration of 2 vCPU and 4GB of memory is more desirable. However, 
 1 vCPU and 2GB is sufficient for most labs in CSC4222 Secure Software Engineering. You can
 easily change the machine configuration later after the machine
 is created. 
 
-- In the navigation menu, click "Marketplace". In the Marketplace, search for Ubuntu 20.04. 
+- In the navigation menu, click "Marketplace". In the Marketplace, search for Ubuntu 20.04. You will find two versions. Choose the Ubuntu 20.04 LTS (Focal), then click "launch".
+![Ubuntu 20.04](./Figs/GoogleCloudUbuntu20.png)
+
+- You will come to the Machine Configuration. 
 
 
 
-![machine configuration](./Figs/gcp_machine_config.jpg)
+
+## Step 3: Machine Configuration
+
 
 
 ## Step 2: Boot disk 
