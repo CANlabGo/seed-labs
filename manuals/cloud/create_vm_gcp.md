@@ -22,24 +22,8 @@ is created.
   <mark> Note: <mark> Do NOT use any versions newer than Ubuntu 20.04, since some labs may not be compatible. Also, make sure to choose the x86/64bit, amd64 version, rather than the arm64 version. 
 ![Boot Disk](./Figs/GoogleCloudBootDisk.png)
 
-- Click "Create", then you will see the created VM on the VM instance page.
+- Click "Create", then you will see the created VM on the VM instance page. You can click "start" to run the VM.
   ![Boot Disk](./Figs/GoogleCloudVM.png)
-
-
-
-## Step 3: Machine Configuration
-
-
-
-## Step 2: Boot disk 
-
-Choose the Ubuntu 20.04 LTS operating system.
-For the disk size, 20 GB is more desirable, but 10 GB is 
-sufficient (you may have to do some cleanup if the disk
-becomes full).
-
-![machine configuration](./Figs/gcp_boot_disk.jpg)
-
 
 ## Step 3: Set up Firewall Rules
 
@@ -56,4 +40,14 @@ SSH: Allow ingress traffic to TCP port 22
 VNC: Allow ingress traffic to TCP port 5901 - 5910
 Note: VNC servers use port 5900 + N, where N is the display number.
 ```
+
+To set the Firewall Rules, start the VM and go to the navigation menu > VPC network > Firewall.
+Check the default SSH, its TPC port should be 22 by default.
+
+Click the "Create firewall rule" on the top.
+
+
+
+
+
 
