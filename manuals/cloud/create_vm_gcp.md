@@ -152,10 +152,13 @@ desktop.
   Start your VNC viewer program, and type the IP address of the VM, along with
   the port number, such as `35.236.203.131:5901`. Most cloud VMs have two
   IP addresses; make sure you use the external IP address, not the internal
-  one. You will be prompted for password, which is the one you typed
+  one. (The external IP can be found on the VM instance page.) You will be prompted for password, which is the one you typed
   when you first run the VNC server. If everything is done correctly,
   you will see the desktop of your remote VM.
 
+  ![VNC1](./Figs/GoogleCloudVNC1.png)
+  ![VNC2](./Figs/GoogleCloudVNC2.png)
+  ![VNC3](./Figs/GoogleCloudVNC3.png)
   
 
 
