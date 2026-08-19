@@ -22,6 +22,9 @@ is created.
   <mark> Note: <mark> Do NOT use any versions newer than Ubuntu 20.04, since some labs may not be compatible. Also, make sure to choose the x86/64bit, amd64 version, rather than the arm64 version. 
 ![Boot Disk](./Figs/GoogleCloudBootDisk.png)
 
+- In the left navigation, set network tag in "Networking". Remember this tag name. You will need to use it in **Step 3**.
+  ![Boot Disk](./Figs/GoogleCloudNetworkTag.png)
+  
 - Click "Create", then you will see the created VM on the VM instance page. You can click "start" to run the VM.
   ![Boot Disk](./Figs/GoogleCloudVM.png)
 
@@ -46,11 +49,109 @@ Check the default SSH, its TPC port should be 22 by default.
 ![SSH](./Figs/GoogleCloudSSH22.png)
 
 
-- Click the "Create firewall rule" on the top.
+- Click the "Create firewall rule" on the top. Set the rule as below and the click "create".
 ![Firewall Rule](./Figs/GoogleCloudFireRule.png)
 
+## Step 4: Install Software and Configure System
 
 
+When the Ubuntu 20.04 VM is built, a default username with the root privilege
+will be created in the system. The actual name of the user is typically
+chosen by the cloud operator. Most cloud platforms will provide
+a method for you to SSH into this account. Please log into the VM, and do the followings:
 
+- Step 4.a: Download [`src-cloud.zip`](https://seed.nyc3.cdn.digitaloceanspaces.com/src-cloud.zip)
+  from the link or using the following command (if copy-and-paste does not work
+  for your SSH client, you may have to type the command; make sure you type
+  the URL correctly):
+  ```
+  curl -o src-cloud.zip https://seed.nyc3.cdn.digitaloceanspaces.com/src-cloud.zip
+  ```
+
+- Step 4.b: In order to unzip the file, we first need to install the `unzip` program
+  using the following command. After that, unzip the file.
+  ```
+  sudo apt update
+  sudo apt -y install unzip
+  unzip src-cloud.zip
+  ```
+
+- Step 4.c: After unzipping the file, you will see a `src-cloud` folder.
+  Enter this folder, and run the following command to install software
+  and configure the system.
+  ```
+  ./install.sh
+  ```
+
+- <mark>**Note:**<mark> This shell script will download and install all the software needed for
+  the SEED labs. The whole process will take a few minutes. Please
+  don't leave, because you will be asked twice to make choices:
+
+  - During the installation of Wireshark, you will be asked
+    whether non-superuser should be able to capture packets.
+    Select `No`.
+
+  - During the installation of `xfce4`, you will be asked to
+    choose a default display manager. Choose `LightDM`.
+
+
+After the script finishes, a new account called `seed` is created.
+We will use this account for all the labs, instead of the default one
+created by the cloud. We intentionally did not set a password for this account,
+so nobody can directly log into this account. We can switch to the `seed`
+account using the following command (if you do not use `sudo`, the OS
+will ask you to type the password, making it impossible to log in):
+```
+sudo su seed
+```
+
+## Step 5: Access the VM Using VNC
+
+For most labs, being able to SSH into the VM should be sufficient.
+Some labs do need to access GUI applications on the VM, such as
+Firefox and Wireshark. If your network bandwidth is not too
+bad, being able to get a graphical desktop of the remote VM is
+always more desirable than getting a text terminal via SSH.
+We will use VNC (Virtual Network Computing) to get the remote
+desktop.
+
+- **On the cloud VM:** We need to make sure that we are in
+  the `seed` account. If you are still in the default account, do
+  the following, and you will be in the `seed` account:
+  ```
+  sudo su seed
+  ```
+
+  Our installation script has already installed
+  the TigerVNC server program on the VM. You need to start the
+  server.
+  ```
+  vncserver -localhost no
+  ```  
+
+  By default, TigerVNC server only listens to localhost/127.0.0.1. The
+  purpose of the `-localhost no` option means accepting access from the
+  outside. When we first start the `vncserver`, we will be asked to provide a
+  password. Make sure this password is strong enough. Moreover, VNC
+  communication itself is not encrypted, so you should not send anything
+  personal. If you do want to secure it, you can run an SSH tunnel or VPN
+  tunnel to protect the VNC communication.
+
+- **On your computer:** You need to have a VNC viewer installed
+  on your computer, such as [TigerVNC](https://tigervnc.org/), and
+  [RealVNC](https://www.realvnc.com/en/connect/download/viewer/).
+  If you prefer other VNC viewers,
+  it is fine. Most of them are compatible with one another.
+  Some users have reported that TigerVNC have issues on macOS,
+  but RealVNC has no problem.
+
+  Start your VNC viewer program, and type the IP address of the VM, along with
+  the port number, such as `35.236.203.131:5901`. Most cloud VMs have two
+  IP addresses; make sure you use the external IP address, not the internal
+  one. You will be prompted for password, which is the one you typed
+  when you first run the VNC server. If everything is done correctly,
+  you will see the desktop of your remote VM.
+
+  
 
 
