@@ -20,10 +20,12 @@ is created.
 
 - In the left navigation, set "OS and storage" to Ubuntu 20.04.
   <mark> Note: <mark> Do NOT use any versions newer than Ubuntu 20.04, since some labs may not be compatible. Also, make sure to choose the x86/64bit, amd64 version, rather than the arm64 version. 
-![Boot Disk](./Figs/GoogleCloudConfiguration2.png)
+![Boot Disk](./Figs/GoogleCloudBootDisk.png)
 
 - Click "Create", then you will see the created VM on the VM instance page.
-  
+  ![Boot Disk](./Figs/GoogleCloudVM.png)
+
+
 
 ## Step 3: Machine Configuration
 
