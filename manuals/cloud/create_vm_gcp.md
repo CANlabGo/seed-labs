@@ -23,10 +23,10 @@ is created.
 ![Boot Disk](./Figs/GoogleCloudBootDisk.png)
 
 - In the left navigation, set network tag in "Networking". Remember this tag name. You will need to use it in **Step 3**.
-  ![Boot Disk](./Figs/GoogleCloudNetworkTag.png)
+  ![Network Tag](./Figs/GoogleCloudNetworkTag.png)
   
 - Click "Create", then you will see the created VM on the VM instance page. You can click "start" to run the VM.
-  ![Boot Disk](./Figs/GoogleCloudVM.png)
+  ![VM Instance](./Figs/GoogleCloudVM.png)
 
 ## Step 3: Set up Firewall Rules
 
