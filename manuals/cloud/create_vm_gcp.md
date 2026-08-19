@@ -61,8 +61,8 @@ chosen by the cloud operator. Most cloud platforms will provide
 a method for you to SSH into this account. Please log into the VM, and do the followings:
 
 - Step 4.a: SSH into this account.
-  ![SSH1](./Figs/GoogleCloudSSHWindow.png)
-  ![SSH2](./Figs/GoogleCloudSSHWindow2.png)
+  ![SSH1](./Figs/GoogleCloudSSHwindow.png)
+  ![SSH2](./Figs/GoogleCloudSSHwindow2.png)
 
 - Step 4.b: Download [`src-cloud.zip`](https://seed.nyc3.cdn.digitaloceanspaces.com/src-cloud.zip)
   from the link or using the following command (if copy-and-paste does not work
