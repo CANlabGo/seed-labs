@@ -60,7 +60,11 @@ will be created in the system. The actual name of the user is typically
 chosen by the cloud operator. Most cloud platforms will provide
 a method for you to SSH into this account. Please log into the VM, and do the followings:
 
-- Step 4.a: Download [`src-cloud.zip`](https://seed.nyc3.cdn.digitaloceanspaces.com/src-cloud.zip)
+- Step 4.a: SSH into this account.
+  ![SSH1](./Figs/GoogleCloudSSHWindow.png)
+  ![SSH2](./Figs/GoogleCloudSSHWindow2.png)
+
+- Step 4.b: Download [`src-cloud.zip`](https://seed.nyc3.cdn.digitaloceanspaces.com/src-cloud.zip)
   from the link or using the following command (if copy-and-paste does not work
   for your SSH client, you may have to type the command; make sure you type
   the URL correctly):
@@ -68,7 +72,7 @@ a method for you to SSH into this account. Please log into the VM, and do the fo
   curl -o src-cloud.zip https://seed.nyc3.cdn.digitaloceanspaces.com/src-cloud.zip
   ```
 
-- Step 4.b: In order to unzip the file, we first need to install the `unzip` program
+- Step 4.c: In order to unzip the file, we first need to install the `unzip` program
   using the following command. After that, unzip the file.
   ```
   sudo apt update
@@ -76,7 +80,7 @@ a method for you to SSH into this account. Please log into the VM, and do the fo
   unzip src-cloud.zip
   ```
 
-- Step 4.c: After unzipping the file, you will see a `src-cloud` folder.
+- Step 4.d: After unzipping the file, you will see a `src-cloud` folder.
   Enter this folder, and run the following command to install software
   and configure the system.
   ```
