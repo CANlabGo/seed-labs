@@ -41,10 +41,12 @@ VNC: Allow ingress traffic to TCP port 5901 - 5910
 Note: VNC servers use port 5900 + N, where N is the display number.
 ```
 
-To set the Firewall Rules, start the VM and go to the navigation menu > VPC network > Firewall.
+- To set the Firewall Rules, start the VM and go to the navigation menu > VPC network > Firewall.
 Check the default SSH, its TPC port should be 22 by default.
 ![SSH](./Figs/GoogleCloudSSH22.png)
-Click the "Create firewall rule" on the top.
+
+
+- Click the "Create firewall rule" on the top.
 ![Firewall Rule](./Figs/GoogleCloudFireRule.png)
 
 
